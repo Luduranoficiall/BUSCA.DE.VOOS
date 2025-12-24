@@ -7,6 +7,6 @@ export class ToursController {
 
   @Get('search')
   async search(@Query('city') city: string): Promise<any> {
-    return this.toursService.searchTours(city);
+    return await this.toursService.searchTours(city);
   }
 }
