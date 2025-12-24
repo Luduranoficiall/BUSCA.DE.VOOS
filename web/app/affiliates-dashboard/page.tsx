@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import * as React from 'react';
 
-const mockData = [
+type Affiliate = { influencer: string; clicks: number; vendas: number };
+const mockData: Affiliate[] = [
   { influencer: 'viagemtop', clicks: 120, vendas: 8 },
   { influencer: 'mochilao2025', clicks: 90, vendas: 5 },
   { influencer: 'familiaemviagem', clicks: 60, vendas: 3 },
 ];
 
 export default function AffiliatesDashboard() {
-  const [data] = useState(mockData);
+  const [data] = React.useState<Affiliate[]>(mockData);
   return (
     <main>
       <h1>Dashboard de Afiliados</h1>
